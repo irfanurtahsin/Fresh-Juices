@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Shack</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <!-- CDN for Lottie -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+    <div class="profile-container">
+        <div>
+            <img class="profile-pic" src="./assets/profile-pic.png" alt="">
+        </div>
+    </div>
+
+    <!-- Header section -->
+
+    <div class="card-container">
+        <div>
+            <h1 class="header">Fresh Juices</h1>
+        </div>
+        <div class="contact-icons">
+            <a href="tel:+966558871454">
+                <div class="icon-bg">
+                    <dotlottie-player src="https://lottie.host/bcfc94bb-d3cb-4731-bc42-cb1b7a8a44de/qEOWN4VuGN.lottie" 
+                                      background="transparent" speed="1" 
+                                      style="width: 50px; height: 50px" loop autoplay>
+                    </dotlottie-player>
+                </div>
+                <p>Call</p>
+            </a>
+            <a href="https://wa.me/966558871454" target="_blank">
+                <div class="icon-bg">
+                    <dotlottie-player src="https://lottie.host/b3c7d9d0-cc97-4cf6-bf09-5b24357f1819/vlCLKqigT6.lottie" 
+                                      background="transparent" speed="1" 
+                                      style="width: 50px; height: 50px" loop autoplay>
+                    </dotlottie-player>
+                </div>
+                <p>WhatsApp</p>
+            </a>
+            <a href="https://maps.app.goo.gl/5EebPL9RU2Z5A3Gg9" target="_blank">
+                <div class="icon-bg">
+                    <dotlottie-player src="https://lottie.host/b3b39c56-30c9-47ae-b18a-1c7b79544624/qvfU6GSPm0.lottie" 
+                                      background="transparent" speed="1" 
+                                      style="width: 50px; height: 50px" loop autoplay>
+                    </dotlottie-player>
+                </div>
+                <p>Maps</p>
+            </a>
+        </div>
+        <div class="save-contact">
+            <button class="bubbly-button" onclick="saveContact()">Save to Contact</button>
+        </div>
+    </div>
+    <!-- About section  -->
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>
+            Welcome to <strong>Juice Shack</strong>, your go-to destination for fresh and natural juices. We use the finest ingredients to craft delicious, healthy, and refreshing drinks to energize your day. Experience the best of nature in every sip!
+        </p>
+    </div>
+    <!-- Product Section -->
+    <div class="product-section">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="./assets/profile-pic.png" alt="Product 1">
+                <h3>Product 1</h3>
+                <label for="size1">Select Size:</label>
+                <select id="size1" class="size-select" data-product="Product 1">
+                    <option value="Small|8">Small SAR 8</option>
+                    <option value="Medium|10">Medium SAR 10</option>
+                    <option value="Big|12">Big SAR 12</option>
+                </select>
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" class="quantity-input" min="1" value="1">
+                <button class="order-btn" onclick="orderProduct('size1', 'quantity1')">Order Now</button>
+            </div>
+    
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="./assets/profile-pic.png" alt="Product 2">
+                <h3>Product 2</h3>
+                <label for="size2">Select Size:</label>
+                <select id="size2" class="size-select" data-product="Product 2">
+                    <option value="Small|8">Small SAR 8</option>
+                    <option value="Medium|10">Medium SAR 10</option>
+                    <option value="Big|12">Big SAR 12</option>
+                </select>
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" class="quantity-input" min="1" value="1">
+                <button class="order-btn" onclick="orderProduct('size2', 'quantity2')">Order Now</button>
+            </div>
+    
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="./assets/profile-pic.png" alt="Product 3">
+                <h3>Product 3</h3>
+                <label for="size3">Select Size:</label>
+                <select id="size3" class="size-select" data-product="Product 3">
+                    <option value="Small|8">Small SAR 8</option>
+                    <option value="Medium|10">Medium SAR 10</option>
+                    <option value="Big|12">Big SAR 12</option>
+                </select>
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" class="quantity-input" min="1" value="1">
+                <button class="order-btn" onclick="orderProduct('size3', 'quantity3')">Order Now</button>
+            </div>
+    
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="./assets/profile-pic.png" alt="Product 4">
+                <h3>Product 4</h3>
+                <label for="size4">Select Size:</label>
+                <select id="size4" class="size-select" data-product="Product 4">
+                    <option value="Small|8">Small SAR 8</option>
+                    <option value="Medium|10">Medium SAR 10</option>
+                    <option value="Big|12">Big SAR 12</option>
+                </select>
+                <label for="quantity4">Quantity:</label>
+                <input type="number" id="quantity4" class="quantity-input" min="1" value="1">
+                <button class="order-btn" onclick="orderProduct('size4', 'quantity4')">Order Now</button>
+            </div>
+    
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="./assets/profile-pic.png" alt="Product 5">
+                <h3>Product 5</h3>
+                <label for="size5">Select Size:</label>
+                <select id="size5" class="size-select" data-product="Product 5">
+                    <option value="Small|8">Small SAR 8</option>
+                    <option value="Medium|10">Medium SAR 10</option>
+                    <option value="Big|12">Big SAR 12</option>
+                </select>
+                <label for="quantity5">Quantity:</label>
+                <input type="number" id="quantity5" class="quantity-input" min="1" value="1">
+                <button class="order-btn" onclick="orderProduct('size5', 'quantity5')">Order Now</button>
+            </div>
+    
+            <!-- Product 6 -->
+            <div class="product">
+                <img src="./assets/profile-pic.png" alt="Product 6">
+                <h3>Product 6</h3>
+                <label for="size6">Select Size:</label>
+                <select id="size6" class="size-select" data-product="Product 6">
+                    <option value="Small|8">Small SAR 8</option>
+                    <option value="Medium|10">Medium SAR 10</option>
+                    <option value="Big|12">Big SAR 12</option>
+                </select>
+                <label for="quantity6">Quantity:</label>
+                <input type="number" id="quantity6" class="quantity-input" min="1" value="1">
+                <button class="order-btn" onclick="orderProduct('size6', 'quantity6')">Order Now</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Footer section  -->
+    <footer class="footer">
+        <p class="ad-text">
+            Powered by <a href="https://irfanurtahsin.com" target="_blank">Irfanur Tahsin</a>
+        </p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
